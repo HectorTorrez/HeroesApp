@@ -1,12 +1,11 @@
-import { Outlet } from "react-router-dom"
-import { HeroesRoutes } from "./heroes/routes/HeroesRoutes"
-import { Navbar } from "./ui"
+import { AuthProvider } from "./auth/context/AuthProvider"
+import { AppRouter } from "./router/AppRouter"
 
 
 export const HeroesApp = () => {
   return (
-    <>
-        <HeroesRoutes/>
-    </>
+    <AuthProvider>
+      <AppRouter />
+    </AuthProvider>
   )
 }
